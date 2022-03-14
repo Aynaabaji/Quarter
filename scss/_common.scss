@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+html,body{
+    font-size: 62.5%;
+}
+
+
+
+
+
+
+$text-color: (
+    "fback": #061C1F,
+    "iback": #FFF3F3,
+    "primary": #081B1E,
+    "anchor" : #8CB2B2,
+    "hover" : #F54431,
+    "whte" : #fff,
+);
+
+$font-family: (
+    "heading": 'Rajdhani',
+    "body": 'Open Sans',
+);
+
+$font-size: (
+    "bighead": 70px,
+    "headline": 50px,
+    "smallhead": 26px,
+    "body": 16px,
+    "card": 20px,
+);
+
+$font-weight: (
+    "light" : 300,
+    "regular" : 400,
+    "medium" : 500,
+    "semi" : 600,
+    "bold" : 700,
+);
+
+@function textColor($colorfor){
+    @return map-get($map: $text-color, $key: $colorfor);
+};
+
+@function fontlee($fofam){
+    @return map-get($map: $font-family, $key: $fofam);
+};
+
+@function fontSize($fonsi){
+    @return map-get($map: $font-size, $key: $fonsi);
+};
+
+@function weights($wet){
+    @return map-get($map: $font-weight, $key: $wet);
+};

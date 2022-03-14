@@ -1,0 +1,95 @@
+@mixin transit {
+    transition:all 0.6s ease;
+    -webkit-transition:all 0.6s ease;
+    -moz-transition:all 0.6s ease;
+    -ms-transition:all 0.6s ease;
+    -o-transition:all 0.6s ease;
+}
+
+
+@mixin homestyle{
+    font-weight: weights(semi);
+    font-family: fontlee(heading);
+    color: textColor(primary);
+    font-size: fontSize(card);
+}
+
+@mixin transX{
+    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+}
+
+
+@mixin transY{
+    transform: translateY(-0.8rem);
+    -webkit-transform: translateY(-0.8rem);
+    -moz-transform: translateY(-0.8rem);
+    -ms-transform: translateY(-0.8rem);
+    -o-transform: translateY(-0.8rem);
+}
+
+
+@mixin iconStyle{
+    font-size: fontsize(headline);
+}
+
+
+@mixin bradius{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@mixin head{
+    font-size: fontSize(headline);
+    font-family: fontlee(heading);
+    padding: 7rem 0;
+}
+
+
+@mixin temp{
+    font-size: fontSize(body);
+    font-family: fontlee(body);
+    text-transform: uppercase;
+}
+
+@mixin buton{
+    display: inline-block;
+    font-size: fontSize(body);
+    font-weight: weights(bold);
+    font-family: fontlee(heading);
+    color: textColor(whte);
+    background: textColor(hover);
+    padding: 1.7rem 3.5rem;
+    text-transform: uppercase;
+    border: 0.2rem solid textColor(hover);
+    @include transit;
+}
+
+@mixin buton_hover{
+    background: transparent;
+    border: 0.2rem solid textColor(whte);
+}
+
+
+
+@mixin rot{
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+}
+
+@mixin icon-rot{
+    transform:rotateZ(-45deg);
+    -webkit-transform:rotateZ(-45deg);
+    -moz-transform:rotateZ(-45deg);
+    -ms-transform:rotateZ(-45deg);
+    -o-transform:rotateZ(-45deg);
+}

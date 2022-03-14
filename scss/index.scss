@@ -1,0 +1,410 @@
+@import "common";
+@import "snippets";
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav {
+    // background: rgb(146, 124, 124);
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    // right: 0;
+    top: 0;
+    padding: 2rem 0;
+
+    &_item1 {
+        border-right: 0.1rem solid #fff;
+    }
+
+    &_item2 {
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+
+
+        .atthe {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            color: textColor(hover);
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+        }
+
+        .nav_item_item {
+            padding-left: 4rem;
+            font-size: fontSize(body);
+            font-family: fontlee(body);
+            color: textColor(whte);
+            @include transit;
+
+            &:hover {
+                color: textColor(hover);
+            }
+        }
+    }
+
+    &_item3 {
+        text-align: right;
+        font-size: fontSize(body);
+        font-family: fontlee(heading);
+
+
+        .purch-but {
+            display: inline-block;
+            @include buton;
+            // margin-bottom: 3rem;
+
+            &:hover{
+                @include buton_hover;
+            }
+
+            h3 {
+                display: inline;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+#banner {
+    background: url("../images/banner.jpg") center no-repeat;
+    background-size: cover;
+    background-color: #001b1fd4;
+    background-blend-mode: multiply;
+    padding: 30rem 0;
+
+    .banner {
+        &_text {
+            text-align: center;
+
+            &_heading {
+                color: textColor(whte);
+                font-weight: weights(bold);
+                font-family: fontlee(heading);
+                font-size: fontSize(headline);
+            }
+
+            &_options {
+                padding: 3rem 0;
+                color: textColor(whte);
+                font-size: fontSize(body);
+
+                span {
+                    color: red;
+                }
+            }
+
+            &_buttons {
+                a {
+                    display: inline-block;
+                    @include buton;
+
+                    &:hover{
+                        @include buton_hover;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.home_page {
+    padding-bottom: 10rem;
+
+
+    &_heading {
+        text-align: center;
+        color: textColor(primary);
+        font-family: fontlee(heading);
+        padding: 5rem 0;
+
+        h1 {
+            font-size: fontSize(bighead);
+        }
+
+        p {
+            font-family: fontlee(body);
+            font-size: fontSize(body);
+        }
+    }
+
+    &_details {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7rem;
+
+        .dets {
+            box-shadow: 0rem 0rem 3.5rem rgba(196, 196, 196, 0.723);
+            @include transit;
+
+            img {
+                width: 100%;
+                padding-bottom: 1rem;
+            }
+
+            &_card {
+                border-top: 0.2rem solid lightgrey;
+                margin-top: 0.2rem;
+                @include homestyle;
+                display: flex;
+                padding: 3rem 3rem;
+                justify-content: space-between;
+
+                &_right {
+                    .rora {
+                        color: textColor(anchor);
+                        @include transit;
+                    }
+                }
+            }
+
+            &:hover {
+                @include transY;
+            }
+
+            &:hover .rora{
+                color: textColor(hover);
+            }
+        }
+    }
+
+
+}
+
+.blog-dets2{
+    width: 706px;
+    margin: 7rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+
+    .detsleft{
+        box-shadow: 0 0 1rem rgba(128, 128, 128, 0.3);
+        @include transit;
+
+
+
+        img{
+            width: 100%;
+        }
+    
+        .dets_card{
+            @include homestyle;
+            padding: 3rem 3rem;
+            display: flex;
+            justify-content: space-between;
+
+            &_right{
+
+                .rora{
+                    color: textColor(anchor);
+                    @include transit;
+                }
+            }
+        }
+
+        &:hover{
+            @include transY;
+        }
+
+        &:hover .rora{
+            color: textColor(hover);
+        }
+    }
+
+
+    .detsright{
+
+        box-shadow: 0 0 1rem rgba(128, 128, 128, 0.3);
+        @include transit;
+
+        img{
+            width: 100%;
+        }
+    
+        .dets_card{
+            @include homestyle;
+            padding: 3rem 3rem;
+            display: flex;
+            justify-content: space-between;
+
+
+            &_right{
+
+                .rora{
+                    color: textColor(anchor);
+                    @include transit;
+                }
+            }
+        }
+
+
+       &:hover{
+           @include transY;
+       }
+
+       &:hover .rora{
+           color: textColor(hover);
+       }
+    }
+
+
+
+}
+
+
+.tuitui{
+    margin-top: 0;
+}
+
+
+
+#rtl{
+    background: textColor(fback);
+    padding: 7rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    @include homestyle;
+    font-size: fontSize(smallhead);
+    color: textColor(whte);
+}
+
+
+
+// core features part starts ======================================
+
+
+
+#core{
+    background: #F2F6F7;
+    padding: 5rem 0;
+
+    .core-features{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+
+        &-item{
+            background: textColor(whte);
+            text-align: center;
+            padding: 5rem;
+
+            .icon-div{
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 9rem;
+                width: 9rem;
+                @include bradius;
+                background: textColor(iback);
+
+                .corex{
+                    font-size: 3rem;
+                    color: textColor(hover);
+                }
+            }
+
+            .det-div{
+                padding-top: 3rem;
+                @include homestyle;
+            }
+        }
+    }
+    
+}
+
+
+//  core feature part ends ========================================
+
+
+// template part starts =================
+#template {
+    .template{
+        &_heading{
+            text-align: center;
+            @include head;
+        }
+
+        &_det{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding-bottom: 7rem;
+            @include temp;
+
+            span{
+                display: inline-block;
+                margin: 0.8rem 1rem;
+            }
+        }
+    }
+}
+// template part ends =================
+
+
+// purchase part starts =================
+
+
+#purchase{
+    background: textColor(fback);
+    padding: 10rem 0;
+
+    .purchase{
+        text-align: center;
+
+        h1{
+            @include head;
+            color: textColor(whte);
+        }
+
+        a{
+            @include buton;
+
+            &:hover{
+                @include buton_hover;
+            }
+        }
+
+
+    }
+}
+
+
+//  purchase part ends ================
+
+
+
+.up_arrow{
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    z-index: 9999;
+    background: textColor(whte);
+    height: 3rem;
+    width: 3rem;
+    opacity: 1;
+    @include transit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(128, 128, 128, 0.338);
+    @include rot;
+
+    .upro{
+        font-size: 2rem;
+        color: textColor(primary);
+        @include icon-rot;
+    }
+}
